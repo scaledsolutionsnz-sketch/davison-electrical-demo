@@ -1,46 +1,43 @@
-# Photos to get from Shaun
+# Photos on the Davison Electrical demo
 
-Every image on the site is currently a stock photo. Each slot is tagged in
-`index.html` with a `<!-- SWAP: img/... -->` comment, so replacing them is a
-find-and-replace once the real photos land.
+## What is real
 
-To swap one: drop the file into `img/`, then change the Unsplash URL just
-before the SWAP comment to the local path, e.g.
+Three photos from Shaun are in `img/` and are used on the site:
 
-    src="https://images.unsplash.com/photo-15447..."   ->   src="img/svc-switchboard.jpg"
+| File | Where it appears |
+|---|---|
+| `img/logo.png` | Original logo supplied by Shaun (black background) |
+| `img/logo-dark.png` | Same logo with the black plate keyed out. This is the one the site uses, in the loading screen, nav and footer |
+| `img/solar-inverter.jpg` | Hero slide, and the "EV chargers, solar & rural" service card |
+| `img/heat-pump.jpg` | Hero slide, and the About section photo |
+| `img/switchboard-work.jpg` | Hero slide, and the background on `review.html` / `private.html` |
 
-For the three hero slides the URL sits in `style="background-image:url('...')"`
-or `data-bg="..."` instead of `src`.
+The three Google reviews on the site are real, taken from Davison Electrical's
+Google listing: Scott McLennan, Jim and Erika Denton, and Sukhwinder Singh.
 
-## The list
+## What is still stock
 
-| File | What it needs to show | Shape |
-|---|---|---|
-| `img/hero-1.jpg` | The best single shot: Shaun or the van on a job, ideally outdoors with room on the left for the headline | wide, 1900px+ |
-| `img/hero-2.jpg` | Second hero slide, a different job or setting | wide, 1900px+ |
-| `img/hero-3.jpg` | Third hero slide | wide, 1900px+ |
-| `img/svc-rewire.jpg` | Rewire or new power points, wiring in a wall or ceiling | 16:9 |
-| `img/svc-switchboard.jpg` | A finished switchboard, tidy and labelled. This is the money shot for an electrician | 16:9 |
-| `img/svc-lighting.jpg` | LED downlights or a pendant in a finished room | 16:9 |
-| `img/svc-faults.jpg` | Testing with a multimeter, or a fault being tracked down | 16:9 |
-| `img/svc-newbuild.jpg` | A new build or reno he has wired | 16:9 |
-| `img/svc-ev-solar.jpg` | EV charger, solar, or a shed/pump on a farm | 16:9 |
-| `img/about-shaun.jpg` | Shaun himself, or the van with signage. Puts a face to the business | 4:3 |
+Four Unsplash photos fill the remaining service cards: an electrician at a
+switchboard, a room with downlights, a multimeter, and plans on a bench. They
+match the trade but they are not Shaun's work.
 
-## What to ask him for
+## What to ask Shaun for
 
-Phone photos are fine, landscape not portrait. The four that matter most, in
-order: a tidy finished switchboard, Shaun or the van, a lit room after new
-downlights, and anything from a farm or shed job. If he only sends four, those
-four cover the hero and the three strongest service cards.
+Phone photos are fine, landscape not portrait. In order of what would improve
+the site most:
+
+1. A finished switchboard, tidy and labelled. This is the money shot for an
+   electrician and it currently uses stock.
+2. Shaun or the van with signage. Puts a face to the business.
+3. A lit room after new downlights.
+4. Anything from a farm, shed or lifestyle block job.
 
 Ask him to avoid anything with a customer's face, house number or address
 visible unless they are happy for it to go public.
 
-## Also worth chasing
+## Note on claims
 
-- The site currently says "5.0 on Google" in the hero and "Rated 5.0 by Oamaru
-  customers" on the reviews section, while the reviews themselves are labelled
-  "Example reviews". If he has no Google reviews yet, those two lines should
-  change before launch. His Facebook page (107 followers) is the real social
-  proof right now.
+The hero says "Five star Google reviews" and the reviews section is headed
+"What Oamaru customers say". Neither states an aggregate score, because the
+overall Google rating has not been verified. If Shaun confirms it, both can
+carry the real number.

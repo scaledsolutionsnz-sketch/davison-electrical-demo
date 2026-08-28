@@ -126,7 +126,16 @@ header.nav.scrolled{background:rgba(20,22,26,.92);backdrop-filter:blur(10px);box
 .hero-slides .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;filter:saturate(.9) contrast(1.05)}
 .hero-slides .slide.active{opacity:1}
 .hero-scrim{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(20,22,26,.72) 0%,rgba(20,22,26,.55) 40%,rgba(20,22,26,.82) 100%)}
+  /* two layers: a vertical wash for the nav and scroll hint, plus a left-weighted
+     one so the headline column sits dark enough for the blue to hold contrast */
+  background:
+    linear-gradient(180deg,rgba(20,22,26,.62) 0%,rgba(20,22,26,.46) 40%,rgba(20,22,26,.8) 100%),
+    linear-gradient(95deg,rgba(16,18,22,.9) 0%,rgba(16,18,22,.72) 40%,rgba(16,18,22,.2) 70%,rgba(16,18,22,0) 88%)}
+/* on a phone the headline runs the full width, so the side-weighted layer stops
+   helping and the wash has to be flat instead */
+@media(max-width:820px){
+  .hero-scrim{background:linear-gradient(180deg,rgba(16,18,22,.8) 0%,rgba(16,18,22,.76) 45%,rgba(16,18,22,.9) 100%)}
+}
 .hero-inner{position:relative;z-index:2;padding:120px 22px 60px;max-width:var(--maxw);margin:0 auto;width:100%}
 .hero h1{color:#fff;font-size:clamp(38px,7.2vw,80px);max-width:15ch;margin:16px 0 0;text-shadow:0 2px 30px rgba(0,0,0,.35)}
 .hero h1 em{color:var(--accent);font-style:normal}
@@ -474,7 +483,7 @@ footer{background:#0f1114;color:rgba(255,255,255,.6);padding:56px 0 28px}
     <div class="rev-head reveal">
       <div class="sec-head">
         <div class="eyebrow">What locals say</div>
-        <h2>Rated 5.0 by Oamaru customers</h2>
+        <h2>What Oamaru customers say</h2>
       </div>
       <span class="badge">Real Google reviews</span>
     </div>
@@ -614,7 +623,7 @@ footer{background:#0f1114;color:rgba(255,255,255,.6);padding:56px 0 28px}
     </div>
     <div class="foot-bottom">
       <span>&copy; <span id="yr"></span> Davison Electrical &middot; Oamaru, North Otago, NZ</span>
-      <span><a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="https://www.google.com/maps/search/?api=1&query=Davison+Electrical+Oamaru" target="_blank" rel="noopener">Reviews</a></span>
+      <span><a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="review.html">Leave a review</a></span>
     </div>
   </div>
 </footer>
